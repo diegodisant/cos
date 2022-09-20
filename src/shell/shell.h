@@ -21,13 +21,13 @@ struct Shell {
     OSShell *shell,
     char entryChar,
     uint8_t color,
-    size_t row,
-    size_t col
+    size_t spaceCol,
+    size_t spaceRow
   );
 
   void (*setEntryChar)(OSShell *shell, char entryChar);
 
-  void (*writeTextWithLimit)(
+  void (*writeText)(
     OSShell *shell,
     const char *text
   );
@@ -49,8 +49,8 @@ void setEntryAt(
   OSShell *shell,
   char entryChar,
   uint8_t color,
-  size_t row,
-  size_t col
+  size_t spaceCol,
+  size_t spaceRow
 );
 
 void setEntryChar(OSShell *shell, char entryChar);
