@@ -1,3 +1,4 @@
-!/build/.keepme
+/build
 
+!/build/.keepme
 *.o
