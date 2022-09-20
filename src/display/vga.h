@@ -29,12 +29,12 @@ enum vga {
   VGA_WHITE = 15,
 };
 
-static inline uint8_t buildVGAColor(
+uint8_t buildVGAColor(
   VGAColor foreground,
   VGAColor background
 );
 
-static inline uint16_t buildVGAEntry(
+uint16_t buildVGAEntry(
   TTYChar termChar,
   uint8_t color
 );
