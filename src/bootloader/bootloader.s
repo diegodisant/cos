@@ -1,10 +1,10 @@
-.section multiboot
+.section .multiboot
 .align 4
 .long ALIGN
 .long FLAGS
 .long CHECKSUM
 
-.section bss
+.section .bss
 .align 16
 
 stack_bottom:
@@ -15,10 +15,10 @@ stack_top:
 .global _start
 .type _start, @function
 _start:
-mov $stack_top, %esp
+  mov $stack_top, %esp
 
-call kernelMain
-cli
+  call kernelMain
+  cli
 
 1:hlt
   jmp 1b
