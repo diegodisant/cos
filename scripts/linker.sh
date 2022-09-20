@@ -3,6 +3,8 @@
 source "./env.sh"
 
 clang -T ${SOURCE_DIR}/bootloader/linker.ld \
+  -fuse-ld=lld \
+  -rtlib=compiler-rt \
   -o ${BUILDS_DIR}/cos.bin \
   -ffreestanding \
   -O2 \
