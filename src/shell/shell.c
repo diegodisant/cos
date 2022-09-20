@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stddef.h>
 #include <stdint.h>
 #include <string.h>
 
@@ -16,7 +17,7 @@ OSShell* createOSShell() {
   shell->spaceRow = 0;
   shell->spaceCol = 0;
   shell->spaceColor = buildVGAColor(VGA_GREEN, VGA_BLACK);
-  shell->buffer = (uint16_t*) SHELL_DEFAULT_BUFFER_ADDRESS;
+  shell->buffer = (uint16_t*) 0xB8000;
 
   shell->init = init;
   shell->setEntryAt = setEntryAt;

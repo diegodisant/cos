@@ -1,4 +1,4 @@
-#include "../shell/shell.h"
+#include "./shell/shell.h"
 
 int main() {
   OSShell *shell = createOSShell();

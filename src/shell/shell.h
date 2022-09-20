@@ -1,9 +1,11 @@
 #ifndef SHELL_H
 #define SHELL_H
 
+#include <stddef.h>
+#include <stdint.h>
+
 static const size_t SHELL_DEFAULT_WIDTH = 80;
 static const size_t SHELL_DEFAULT_HEIGHT = 25;
-static const uint8_t SHELL_DEFAULT_BUFFER_ADDRESS = 0xB8000;
 
 typedef struct Shell OSShell;
 
